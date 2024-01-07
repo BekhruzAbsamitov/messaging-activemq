@@ -123,3 +123,6 @@ G.idea/sonarlint/issuestore/0/f/0f69df5443140664a218387f42e33c2aa86acb2d,3/8/38
 app3/.gitignore,8/1/81d37339aa215b1adf313dd73b76b0f1feb8c12b
 9
 	app3/mvnw,4/5/45907c9b04dc6c20051be7ea1735e5bc1eec86a6
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
