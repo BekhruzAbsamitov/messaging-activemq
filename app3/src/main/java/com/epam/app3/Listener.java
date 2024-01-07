@@ -1,4 +1,4 @@
-package com.epam.app2;
+package com.epam.app3;
 
 import jakarta.jms.JMSException;
 import jakarta.jms.Message;
@@ -11,9 +11,9 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class Listener {
 
-    @JmsListener(destination = "Consumer.my-consumer.VirtualTopic.my-topic", containerFactory = "defaultJmsListenerContainerFactory")
+    @JmsListener(destination = "Consumer.my-consumer.VirtualTopic.my-topic", containerFactory = "queueListenerFactory")
     public void receive(Message message) throws JMSException {
         TextMessage textMessage = (TextMessage) message;
-        log.info("Message received: {}", textMessage.getText());
+        log.info("Received: {}", textMessage.getText());
     }
 }

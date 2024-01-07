@@ -14,14 +14,15 @@ import org.springframework.jms.core.JmsTemplate;
 public class JmsConfig {
 
     @Bean
-    public ActiveMQQueue topic() {
-        return new ActiveMQQueue("my-queue");
+    public Topic topic() {
+        return new ActiveMQTopic("VirtualTopic.my-topic");
     }
 
     @Bean
     public JmsTemplate jmsTopicTemplate(ActiveMQConnectionFactory connectionFactory) {
         JmsTemplate template = new JmsTemplate();
         template.setConnectionFactory(connectionFactory);
+        template.setPubSubDomain(true);
         return template;
     }
 
